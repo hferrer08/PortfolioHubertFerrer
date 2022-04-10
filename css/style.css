@@ -71,7 +71,7 @@ body{
         grid-template-rows: 80px 1fr 1fr 250px;
         grid-template-columns: 1fr 1fr 20px;
         height:100vh;
-        grid-gap: 10px;
+        grid-gap: 20px;
         margin-top: 30px;
         margin-left: 70px;
         margin-right: 70px;
@@ -94,8 +94,9 @@ body{
 
 #header{
     grid-area: header;
-      width: 320px;
-    justify-self: flex-end;
+    justify-self: space-evenly;
+    flex-wrap: wrap;
+  
 
     
     
@@ -114,19 +115,26 @@ body{
 /* botones header */
 
 .listaNavegacionHeader{
-display: flex;
-flex-direction: row;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+
+
+}
 
 /* hijos botones header */
-}
 .hijoNavegacionHeader{
-   
+    width:300px;
     color:aliceblue;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
     background: rgb(38,37,37);
     background: linear-gradient(270deg, rgba(38,37,37,1) 0%, rgba(12,68,187,1) 100%);
+    
 }
+
 
     /* seccion sobre mi  */
 #sobreMi{
@@ -269,9 +277,9 @@ a{
 
 
 
-
     }
 
+    /* encabezado proyectos */
     #headerProyectos{
         grid-area: headerProyectos;
           width: 320px;
@@ -282,7 +290,7 @@ a{
         }
     
         
-       /* footer */
+       /* footer pagina proyectos */
         
     #footerProyectos{
             grid-area: footerProyectos;
@@ -291,7 +299,65 @@ a{
             
         }
 
+        /* galeria de proyectos */
+
     #sectionProyectos{
         grid-area: sectionProyectos;
         margin-top:30px;
     }
+
+/* Animaciones, transformaciones, transiciones */
+
+/* Agranda botones de navegacion */
+.transicionBotones{
+    transition: all 2s;
+}
+
+.transicionBotones:hover{
+    height: 50px;
+    width: 320px;
+
+}
+/* Cambio de color seccion sobre mi */
+
+.transicionSobreMi{
+    
+    transition: all 4s;
+}
+.transicionSobreMi:hover{
+    background-color:blue;
+}
+
+/* Agrandar imagenes de proyecto  */
+.transicionImagenesProyecto{
+    
+    transition: all 1.5s;
+}
+.transicionImagenesProyecto:hover{
+    width: 250px;
+    height: 250px;
+}
+
+/* Agrandar iconos de redes sociales */
+.transicionIconosRedes{
+    
+    transition: all 1.5s;
+}
+.transicionIconosRedes:hover{
+    width: 100px;
+    height: 100px;
+}
+
+/* Animacion titulo proyectos destacados */
+
+.animate__animated.animate__fadeInLeftBig{
+    --animate-delay: 1s;
+    --animate-duration: 5s;
+}
+
+
+/* Animacion titulo sobre mi */
+.animate__animated.animate__rubberBand{
+    --animate-delay: 1s;
+    --animate-duration: 3s;
+}
