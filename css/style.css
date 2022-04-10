@@ -1,0 +1,297 @@
+
+/* rest */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* body - font, color */
+
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
+    color:antiquewhite;
+    
+}
+
+
+
+/* vista movil */
+@media screen and (max-width: 768px){
+    #grillaContenedorIndex{
+        display:grid;
+        grid-template-areas: 
+        "footer footer footer"
+        " . proyectos ."
+        "header header header";
+      
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+
+      justify-content: center;
+        align-content: center;
+        text-align: center;
+        background-image: url("../images/background.PNG");
+        background-size: cover;
+      
+      
+    }
+    
+
+    #header{
+        grid-column: 1/ -1;
+       
+        justify-self: center;
+    }
+   
+
+    #sobreMi{
+        display:none;
+    }
+
+   #videoFrontEnd{
+       display:none;
+   }
+
+      
+}
+
+/* vista desktop */
+@media screen and (min-width: 768px){
+    #grillaContenedorIndex{
+        display:grid;
+        grid-template-areas: 
+        "header header header"
+        "sobreMi sobreMi videoFrontEnd"
+        " proyectos proyectos proyectos"
+        "footer footer footer ";
+    
+    
+    
+        grid-template-rows: 80px 1fr 1fr 250px;
+        grid-template-columns: 1fr 1fr 20px;
+        height:100vh;
+        grid-gap: 10px;
+        margin-top: 30px;
+        margin-left: 70px;
+        margin-right: 70px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        background-image: url("../images/background.PNG");
+        background-size: cover;
+             
+    }
+
+
+
+
+    }
+
+      
+    
+/* encabezado botones index */
+
+#header{
+    grid-area: header;
+      width: 320px;
+    justify-self: flex-end;
+
+    
+    
+    }
+
+    
+   /* footer */
+    
+#footer{
+        grid-area: footer;
+      
+    justify-self: center;
+        
+    }
+
+/* botones header */
+
+.listaNavegacionHeader{
+display: flex;
+flex-direction: row;
+
+/* hijos botones header */
+}
+.hijoNavegacionHeader{
+   
+    color:aliceblue;
+    margin-top: 20px;
+    font-size: 18px;
+    background: rgb(38,37,37);
+    background: linear-gradient(270deg, rgba(38,37,37,1) 0%, rgba(12,68,187,1) 100%);
+}
+
+    /* seccion sobre mi  */
+#sobreMi{
+        grid-area: sobreMi;
+        border: solid 1px;
+        justify-content: center;
+        align-self: center;
+        padding-top: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
+        flex-wrap: wrap;
+       
+        
+        
+    }
+    
+    /* video explicando el frontend */
+    
+#videoFrontEnd{
+        grid-area:videoFrontEnd;
+
+    }
+    
+    
+/* galeria de proyectos */
+
+#proyectos{
+        grid-area: proyectos;
+        
+        margin-top: 30px;
+     }
+/* 
+centrar */
+
+.centrado{
+    text-align: center;
+}
+
+/* redondear bordes */
+
+.bordesRedondeados{
+    border-radius: 30px;
+}
+
+/* tamño images */
+
+.imgChica{
+    width: 200px;
+    height: 200px;
+}
+
+/* contenedor galeria de proyectos */
+
+.contenedorProyectos{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+/* tamaño de iconos */
+
+.icon{
+    width: 80px;
+    height: 80px;
+}
+
+/* posicion de redes sociales fixed */
+
+.posicionRedes{
+    position: fixed;
+    top: 200px;
+    right:20px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* quitar decoracion de hipervinculos */
+
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+/* PAGINA PROYECTOS */
+
+
+/* vista movil */
+@media screen and (max-width: 768px){
+    #grillaContenedorProyectos{
+        display:grid;
+        grid-template-areas: 
+        "headerProyectos headerProyectos headerProyectos"
+        " . sectionProyectos ."
+        "footerProyectos footerProyectos footerProyectos";
+      
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+
+     
+        background-image: url("../images/background.PNG");
+        background-size: cover;
+      
+      
+    }
+    
+
+   
+
+      
+}
+
+/* vista desktop */
+@media screen and (min-width: 768px){
+    #grillaContenedorProyectos{
+        display:grid;
+        grid-template-areas: 
+        "headerProyectos headerProyectos headerProyectos"
+        " sectionProyectos sectionProyectos sectionProyectos"
+        "footerProyectos footerProyectos footerProyectos ";
+    
+    
+    
+        grid-template-rows: 80px 1fr 250px;
+        grid-template-columns: 1fr 1fr 20px;
+        height:100vh;
+        grid-gap: 10px;
+        margin-top: 30px;
+        margin-left: 70px;
+        margin-right: 70px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        background-image: url("../images/background.PNG");
+        background-size: cover;
+             
+    }
+
+
+
+
+    }
+
+    #headerProyectos{
+        grid-area: headerProyectos;
+          width: 320px;
+        justify-self: flex-end;
+    
+        
+        
+        }
+    
+        
+       /* footer */
+        
+    #footerProyectos{
+            grid-area: footerProyectos;
+          
+        justify-self: center;
+            
+        }
+
+    #sectionProyectos{
+        grid-area: sectionProyectos;
+        margin-top:30px;
+    }
